@@ -141,9 +141,7 @@ periodics:
         value: "prepull-head.yaml"
       image: gcr.io/k8s-testimages/kubekins-e2e:v20210327-170ffe2-master
   annotations:
-    fork-per-release: "true"
-    fork-per-release-replacements: "--extract=ci/latest -> --extract=ci/latest-{{.Version}}"
-    testgrid-dashboards: google-windows, sig-windows-gce, sig-release-master-informing, sig-windows-signal, sig-windows-master-release
+    testgrid-dashboards: google-windows, sig-windows-gce, sig-windows-signal, sig-windows-master-release
     testgrid-tab-name: gce-windows-20h2-master
     description: Runs tests on a Kubernetes cluster with Windows 20H2 nodes on GCE
 
